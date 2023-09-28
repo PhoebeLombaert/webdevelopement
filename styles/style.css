@@ -6,7 +6,6 @@ body{
     place-items: center;
 
 }
-
 .container{
     width: 50%;
     margin: 100px auto;
@@ -16,11 +15,36 @@ body{
     height: 800px;
 }
 
-h1 {
+h1{
     text-align: center;
 }
 
-.buttons{
+ol{
+    margin: 0;
+    place-items: center;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+li{
+    padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+    color: black;
+    background: #f69d3c;
+    border-radius: 3rem;
+    width: 40rem;
+    text-align: center;
+}
+
+li:hover{
+    border: 1px solid;
+
+}
+
+.home{
     margin-top: 50px;
     width: 40rem;
     margin-left: 40px;
@@ -31,7 +55,13 @@ h1 {
     background: #f69d3c;
 }
 
-.buttons:hover{
-    cursor:pointer;
+.home:hover{
     border: 1px solid;
+    cursor:pointer;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }

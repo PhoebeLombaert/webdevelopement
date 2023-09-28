@@ -2,13 +2,11 @@
 
 body{
     font-family: sans-serif;
-    background: linear-gradient(90deg, #f5f5dc, white);
-
 }
 
 button{
     padding: 1.1rem 1.5rem 1.1rem 1.5rem;
-    background-color: #FFD580;
+    background-color: lightskyblue;
     font-weight: bold;
     border: none;
     border-radius: 3rem;

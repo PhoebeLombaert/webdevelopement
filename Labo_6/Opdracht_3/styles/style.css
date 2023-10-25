@@ -1,0 +1,36 @@
+body{
+    font-family: helvetica sans-serif;
+}
+
+h1{
+    font-size: 80px;
+    color: #EDF2F4;
+}
+
+h2{
+    font-size: 40px;
+    color: #EDF2F4;
+}
+
+a{
+    color:#EF233C;
+}
+
+section{
+    padding: 30px;
+    background-color: #8D99AE;
+}
+
+header{
+    padding: 30px;
+    margin-bottom: 10px;
+    color: #8D99AE;
+    background-color: #2B2D42;
+}
+
+footer{
+    padding: 30px;
+    margin-top: 10px;
+    color: #8D99AE;
+    background-color: #2B2D42;
+}

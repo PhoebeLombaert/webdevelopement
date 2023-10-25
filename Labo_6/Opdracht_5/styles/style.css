@@ -1,0 +1,10 @@
+.icon{
+    background-image: url(../images/muts_omlaag.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+.icon:hover{
+    background-image: url(../images/muts_omhoog.jpg);
+}

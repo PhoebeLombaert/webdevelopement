@@ -1,0 +1,37 @@
+table {
+    width: 30px;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 5px;
+    border: dotted 1px black;
+}
+
+th.maand{
+    background-color: rgb(170, 170, 200);
+}
+
+th.dagen {
+    background-color: rgb(35, 37, 70);
+    color: rgb(200, 190, 240);
+}
+
+tr>td.grijs{
+    background-color: lightgrey;
+    color: grey;
+}
+
+td:last-child {
+    background-color: rgb(35, 37, 70);
+}
+
+td:nth-child(6n+1),
+td:nth-child(6n+1) {
+    background-color: rgb(255, 220, 220);
+}
+
+.vrije-dag{
+    background-color: rgb(250, 120, 120);
+}

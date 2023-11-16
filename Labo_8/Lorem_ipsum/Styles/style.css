@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    padding: 0;
+}
+
+div.kolom{
+    width: 48%;
+    box-sizing: border-box;
+    padding: 10px;
+    float: left;
+    border: 1px solid black;
+    margin-right: 10px;
+}

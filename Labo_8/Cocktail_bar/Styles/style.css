@@ -1,0 +1,70 @@
+body{
+    font-family: Arial sans-serif;
+    font-size: 1.2em;
+    margin: auto;
+}
+
+.drankjes{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+h1{
+    color: #007e7e;
+    font-size: 150%;
+}
+
+h2{
+    color: #007e7e;
+    font-size: 130%;
+}
+
+.specials{
+    width: 25%;
+    float: right;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.info{
+    width: 70%;
+}
+
+.specials article {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.info article {
+    padding: 20px;
+}
+
+#guarantee{
+    margin: 30px;
+    padding: 20px;
+    color: #44444444;
+    background-color: #A7CECE;
+    border: 1px dotted white;
+}
+
+article>h2.geel{
+    color: #E8BB00;
+}
+
+article>h2.bruin{
+    color: #79553D;
+}
+
+article>h2.zwart{
+    color: black;
+}
+
+.link:hover{
+    color: saddlebrown;
+}
+
+body>footer{
+    font-size: 0.6em;
+    float: right;
+}

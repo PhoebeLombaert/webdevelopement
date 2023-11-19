@@ -20,32 +20,42 @@ h2{
     font-size: 130%;
 }
 
-.specials{
-    width: 25%;
-    float: right;
-    text-align: center;
-    margin-right: 15px;
+section {
+    width: 70%;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
-.info{
-    width: 70%;
+.specials{
+    width: 25%;
+    padding: 20px;
+    float: right;
+    text-align: center;
+    margin: 15px;
+    border: #007e7e solid 1px;
+    background-image: url("../Images/cocktail.gif");
+    background-repeat: repeat-x;
 }
+
+
 
 .specials article {
     background-color: #f8f8f8;
     padding: 20px;
 }
 
-.info article {
-    padding: 20px;
-}
+
 
 #guarantee{
     margin: 30px;
-    padding: 20px;
+    padding: 20px 80px;
     color: #44444444;
     background-color: #A7CECE;
-    border: 1px dotted white;
+    border: dotted white;
+    background-image: url("../Images/background.gif");
+    background-repeat: no-repeat;
+    font-style: italic;
+
 }
 
 article>h2.geel{
@@ -64,7 +74,7 @@ article>h2.zwart{
     color: saddlebrown;
 }
 
-body>footer{
+body>footer {
     font-size: 0.6em;
-    float: right;
+    text-align: center;
 }

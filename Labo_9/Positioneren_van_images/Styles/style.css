@@ -1,0 +1,35 @@
+
+article {
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+    width: 100%;
+}
+
+
+article:nth-child(even) {
+    margin-right: 10px;
+}
+
+article:nth-child(even) img {
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+article:nth-child(odd) img {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+article h2,
+article p {
+    font-size: 1.25em;
+}
+
+
+

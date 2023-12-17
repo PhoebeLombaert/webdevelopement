@@ -14,7 +14,7 @@ body{
     background-color: white;
     padding: 20px;
     border-radius: 20px;
-    height: 800px;
+    height: 900px;
     opacity: 0.8;
 }
 
@@ -56,4 +56,18 @@ a{
 .buttons:hover{
     cursor:pointer;
     border: 1px solid;
+}
+
+
+
+@media only screen and (max-width: 768px){
+
+    li{
+        width: 20rem;
+    }
+
+    .container{
+        width: 75%;
+        height: 850px;
+    }
 }

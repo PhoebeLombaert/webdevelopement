@@ -47,7 +47,7 @@ header, footer{
     justify-content: center;
 }
 
-header a, footer a{
+header a{
     color: #ddaa00;
 }
 

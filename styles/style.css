@@ -71,3 +71,19 @@ a{
     color: black;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 768px){
+
+    h1{
+        font-size: x-large;
+    }
+
+    li{
+        width: 15rem;
+    }
+
+    .container{
+        width: 75%;
+        height: 850px;
+    }
+}

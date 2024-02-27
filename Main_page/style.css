@@ -62,8 +62,12 @@ a{
 
 @media only screen and (max-width: 768px){
 
+    h1{
+        font-size: x-large;
+    }
+
     li{
-        width: 20rem;
+        width: 15rem;
     }
 
     .container{

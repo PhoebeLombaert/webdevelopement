@@ -6,7 +6,7 @@ const setup = () => {
 }
 
 const berekenIndexOf = () =>     {
-    let tekst = document.getElementById("txtInput").innerText;
+    let tekst = document.getElementById("txtInput").innerText.toLowerCase();
     let uitvoerIndexOf = document.getElementById("totaalIndexOf");
     let totaal = 0;
     let index = 0;
@@ -22,7 +22,7 @@ const berekenIndexOf = () =>     {
 
 const berekenLastIndexOf = () =>     {
 
-    let tekst = document.getElementById("txtInput").innerText;
+    let tekst = document.getElementById("txtInput").innerText.toLowerCase();
     let uitvoerLastIndexOf = document.getElementById("totaalLastIndexOf");
     let index = tekst.length;
     let count = 0;

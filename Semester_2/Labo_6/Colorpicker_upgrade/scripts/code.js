@@ -1,82 +1,61 @@
 const setup = () => {
-    const sliders = document.getElementsByClassName("slider");
+    const redSlider = document.getElementById("rood");
+    const greenSlider = document.getElementById("groen");
+    const blueSlider = document.getElementById("blauw");
+    const colorBox = document.querySelector(".kleurBlok");
+    const saveButton = document.getElementById("btnSave");
 
-    for(let i = 0; i < sliders.length; i++){
-        sliders[i].addEventListener("input", update)
-    }
+    saveButton.addEventListener('click', KleurOpslaan);
 
-    const btnSaveColor = document.getElementById("btnSaveColor");
-    btnSaveColor.addEventListener("click", MakeColorSquare);
+    redSlider.addEventListener("input", updateKleur);
+    greenSlider.addEventListener("input", updateKleur);
+    blueSlider.addEventListener("input", updateKleur);
 
-    update();
-}
+    updateKleur();
 
-const update = () => {
-    const colorBox = document.getElementById("txtViewColor");
-    const sliders = document.getElementsByClassName("slider");
-    const labels = document.getElementsByClassName("label");
-
-    let value = [];
-    for(let i = 0; i < sliders.length; i++){
-        labels[i].innerHTML = (sliders[i].value * 2.55).toFixed(0);
-    }
-    colorBox.style.backgroundColor = "rgb(" + (sliders[0].value * 2.55) + ", " + (sliders[1].value * 2.55) + ", " + (sliders[2].value * 2.55) + ")";
-}
-
-const MakeColorSquare = () =>{
-    const sliders = document.getElementsByClassName("slider");
-    const ValueRed = sliders[0].value * 2.55;
-    const ValueGreen = sliders[1].value * 2.55;
-    const ValueBlue = sliders[2].value * 2.55;
-
-    let divElement = document.createElement("div");
-    divElement.classList.add("colorbox")
-    divElement.addEventListener('click', updateColor);
-    divElement.setAttribute("data-red", ValueRed.toString());
-    divElement.setAttribute("data-green", ValueGreen.toString());
-    divElement.setAttribute("data-blue", ValueBlue.toString());
-    divElement.style.backgroundColor = "rgb(" + ValueRed + ", " + ValueGreen + ", " + ValueBlue + ")";
-    divElement.style.width = "100px";
-    divElement.style.height = "100px";
-    divElement.style.display = "inline-block";
-    divElement.style.marginLeft = "15px"
-
-    let btnElement = document.createElement("button");
-    btnElement.addEventListener('click', deleteColor);
-    let btnTekstNode = document.createTextNode("X");
-    divElement.appendChild(btnElement);
-    btnElement.appendChild(btnTekstNode);
-
-    document.querySelector("#colorsSaved").appendChild(divElement);
-}
-
-const updateColor = (event) => {
-    const colorBox = document.getElementById("txtViewColor");
-    const sliders = document.getElementsByClassName("slider");
-    const labels = document.getElementsByClassName("label");
-
-    const ValueRed = event.target.getAttribute("data-red");
-    const ValueGreen = event.target.getAttribute("data-green");
-    const ValueBlue = event.target.getAttribute("data-blue");
-
-    for(let i = 0; i < sliders.length; i++){
-        labels[i].removeChild(labels[I].childNodes[0]);
-    }
-
-    labels[0].appendChild(document.createTextNode(Math.round(ValueRed)));
-    labels[1].appendChild(document.createTextNode(Math.round(ValueGreen)));
-    labels[2].appendChild(document.createTextNode(Math.round(ValueBlue)));
-
-    sliders[0].value = ValueRed / 2.55;
-    sliders[1].value = ValueGreen / 2.55;
-    sliders[2].value = ValueBlue / 2.55;
-
-    colorBox.style.backgroundColor = "rgb(" + ValueRed + ", " + ValueGreen + ", " + ValueBlue + ")";
 
 }
 
-const deleteColor = (event) => {
-    event.target.parentElement.remove();
+const updateKleur = () => {
+    const redSlider = document.getElementById("rood");
+    const greenSlider = document.getElementById("groen");
+    const blueSlider = document.getElementById("blauw");
+    const redValue = document.getElementById("rodeValue");
+    const greenValue = document.getElementById("groeneValue");
+    const blueValue = document.getElementById("blauweValue");
+    const colorBox = document.querySelector(".kleurBlok");
+
+    redValue.textContent = redSlider.value;
+    greenValue.textContent = greenSlider.value;
+    blueValue.textContent = blueSlider.value;
+
+    colorBox.style.backgroundColor = `rgb(${redSlider.value},${greenSlider.value},${blueSlider.value})`;
+}
+
+
+const KleurOpslaan = () =>{
+    const redValue = document.getElementById("rood").value;
+    const greenValue = document.getElementById("groen").value;
+    const blueValue = document.getElementById("blauw").value;
+
+    const colorBox = document.createElement('div');
+    const deleteButton = document.createElement('button');
+    const savedColors = document.getElementById("opgeslaanKleur");
+
+    colorBox.style.backgroundColor = `rgb(${redValue},${greenValue},${blueValue})`;
+    colorBox.classList.add("blok");
+
+    deleteButton.textContent = "x";
+    deleteButton.addEventListener("click", () => {
+        colorBox.remove();
+    });
+
+    colorBox.addEventListener("click", () => {
+        document.querySelector(".kleurBlok").style.backgroundColor = colorBox.style.backgroundColor;
+    });
+
+    colorBox.appendChild(deleteButton);
+    savedColors.appendChild(colorBox);
 }
 
 // dit is de eerste regel code die uitgevoerd wordt,

@@ -13,7 +13,6 @@ const setup = () => {
 
     updateKleur();
 
-    // Kleuren uit localStorage herstellen
     kleurenUitStorageTonen();
 }
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Colorpicker - pro</title>
+    <link rel="icon" type="image/x-icon" href="../../../Main_page/favicon.ico">
+</head>
+<body>
+<section>
+    <div class="colorpicker">
+        <div>
+            <span>0</span>
+            <label for="rood"></label>
+            <input class="rodeSlider" id="rood" max="255" min="0" type="range" value="0"/>
+            <span>255</span>
+            <span id="rodeValue">0</span>
+        </div>
+        <div>
+            <span>0</span>
+            <label for="groen"></label>
+            <input class="groeneSlider" id="groen" max="255" min="0" type="range" value="0"/>
+            <span>255</span>
+            <span id="groeneValue">0</span>
+        </div>
+        <div>
+            <span>0</span>
+            <label for="blauw"></label>
+            <input class="blauweSlider" id="blauw" max="100" min="0" type="range" value="50"/>
+            <span>255</span>
+            <span id="blauweValue">0</span>
+        </div>
+    </div>
+    <div class=" colorpicker kleurBlok"></div>
+    <div class="colorpicker">
+        <button id="btnSave">SAVE</button>
+    </div>
+</section>
+<div id="opgeslaanKleur">
+</div>
+<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+</body>
+</html>
